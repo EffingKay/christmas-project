@@ -1,0 +1,27 @@
+    <div class="container new-show">
+    <% if (error) { %>
+      <ul class="collection">
+        <li class="collection-item"> <%= error %> </li>
+      </ul>
+    <% } %>
+    <h3>edit <%= show.title %></h3>
+
+    <div class="row">
+      <form class="col s12" action="/shows/<%= show._id %>" method="post">
+        <input type="hidden" name="_method" value="put">
+        <div class="row left-align">
+          <div class="input-field col s12">
+            <input id="show-title" type="text" name="show[title]" class="validate" value="<%= show.title %>" >
+            <label for="show-title">Show</label>
+          </div>
+          <div class="input-field col s12">
+            <input id="show-image" type="text" name="show[image]" class="validate" value="<%= show.image %>" required>
+            <label for="show-image">Image URL</label>
+          </div>
+        </div>
+        <button class="btn waves-effect waves-light" type="submit" name="action">Update</button>
+      </form>
+    </div>
+
+
+    </div>

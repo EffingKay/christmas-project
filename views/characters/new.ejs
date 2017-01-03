@@ -1,0 +1,41 @@
+<div class="container new-show">
+
+
+<h3>new character</h3>
+
+    <div class="row">
+        <form class="col s12" action="/shows/show" method="post">
+          <div class="row">
+            <div class="input-field col s12">
+              <input id="show" type="text" name="character[show]" value="<%= character.showId %>" readonly>
+              <label for="show">Show ID</label>
+            </div>
+            <div class="input-field col s12">
+              <input id="name" type="text" name="character[name]" required>
+              <label for="name">Name</label>
+            </div>
+            <div class="input-field col s12">
+              <input id="image-url" type="text" name="character[image]" required>
+              <label for="image-url">Image URL</label>
+            </div>
+
+              <div class="input-field col s12">
+                <textarea id="quote" class="materialize-textarea" name="character[quote]" required></textarea>
+                <label for="quote">Quote</label>
+              </div>
+            </div>
+            <div class="row">
+              <div class="input-field col s12">
+                <textarea id="reason" class="materialize-textarea" name="character[reason]" required></textarea>
+                <label for="reason">Reason</label>
+              </div>
+            </div>
+          </div>
+          <button class="btn waves-effect waves-light" type="submit" name="action">Create</button>
+
+        </form>
+      </div>
+
+
+
+</div>

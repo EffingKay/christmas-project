@@ -1,0 +1,26 @@
+<div class="container new-show">
+<% if (error) { %>
+  <ul class="collection">
+    <li class="collection-item"> <%= error %> </li>
+  </ul>
+<% } %>
+<h3>new show</h3>
+
+<div class="row">
+  <form class="col s12" action="/shows" method="post">
+    <div class="row left-align">
+      <div class="input-field col s12">
+        <input id="show-title" type="text" name="show[title]" class="validate">
+        <label for="show-title">Show</label>
+      </div>
+      <div class="input-field col s12">
+        <input id="show-image" type="text" name="show[image]" class="validate">
+        <label for="show-image">Image URL</label>
+      </div>
+    </div>
+    <button class="btn waves-effect waves-light" type="submit" name="action">Create</button>
+  </form>
+</div>
+
+
+</div>

@@ -1,0 +1,14 @@
+
+<% shows.forEach(show => { %>
+  <a href="/shows/<%= show._id %>">
+  	<div class="show" style="background-image:url('<%= show.image %>')">
+  	<h1><%= show.title %></h1>
+  	</div>
+  </a>
+<% }) %>
+
+<a href="/shows/new">
+<div class="show" style="background-image:url('/images/new-show-bg.jpg')">
+<h1>add new show</h1>
+</div>
+</a>

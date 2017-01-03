@@ -1,0 +1,23 @@
+<div class="container new-show">
+
+  <h3> <%= character.name %> </h3>
+  <img class="responsive-img" src="<%= character.image %>">
+
+  <blockquote>
+    <%= character.quote %>
+  </blockquote>
+
+  <p class="flow-text">Why is he an asshole? <br><%= character.reason %></p>
+  
+  <div class="buttons-add-delete">
+    <button type="button" class="waves-effect waves-light btn" name="button"><a href="/characters/<%= character._id %>/edit">Edit</a></button>
+
+    <form action="/characters/<%= character._id %>" method="post" class="delete-form">
+      <input type="hidden" name="_method" value="delete">
+      <button type="submit" class="waves-effect waves-light btn">delete</button>
+    </form>
+    <br><br>
+    <button type="button" class="waves-effect waves-teal btn-flat" name="button"><a href="/shows/<%= character.show %>">Back to show</a></button>
+  </div>
+
+</div>

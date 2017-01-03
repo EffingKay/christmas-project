@@ -1,0 +1,26 @@
+<div class="show-show">
+
+<h3 class="show-title"><%= show.title %><h3>
+<% characters.forEach(character => { %>
+
+    <div class="profile-pic" style="background-image:url('<%= character.image %>')">
+    </div>
+    <h1 class="character-name"><%= character.name %></h1>
+    <p><em>"<%= character.quote %>"</em></p>
+    <p><b>Why is he an asshole?</b> <%= character.reason %> </p>
+    <a class="waves-effect waves-light btn-flat" href="/characters/<%= character._id %>">more</a><br><br>
+
+<% }); %>
+
+<div class="buttons-add-delete">
+
+<a class="waves-effect waves-light btn" href="/shows/<%= show._id %>/characters/new">add new character</a>
+<a class="waves-effect waves-light btn" href="/shows/<%= show._id %>/edit">edit show</a>
+
+<form class="delete-form" action="/shows/<%= show._id %>" method="post">
+  <input type="hidden" name="_method" value="delete">
+  <button type="submit" class="waves-effect waves-light btn">delete the show</button>
+</form>
+</div>
+
+</div>
